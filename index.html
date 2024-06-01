@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="syle.css">
+</head>
+<body>
+    <div id="welcome-screen">
+        <h1>Welcome to the Number Guessing Game!</h1>
+        <button id="welcome-start-btn"><a class="codepen-button"><span>Start your name</span></a></button>
+    </div>
+
+    <div id="input-screen" style="display: none;">
+        <h2>Enter Player Names</h2>
+        <label for="player1-name">Player 1: </label>
+        <input type="text" id="player1-name">
+        <br>
+        <label for="player2-name">Player 2: </label>
+        <input type="text" id="player2-name">
+        <br>
+        <button id="name-start-btn"><span>Start Game</span>
+        </button>
+    </div>
+
+      <div id="game-screen" style="display: none;"> 
+        <div class="alomgir">
+            <h1 class="show">Player One</h1>
+            <p class="error"></p>
+            <div class="main player_one">
+              <input class="player_one_input" type="number" placeholder="Player One">
+              <button class="player_one_button">Go</button>
+            </div>
+
+            <div class="main player_tow">
+                <input class="player_tow_input"type="number" placeholder="Player Tow">
+                  <button class="player_tow_button">check</button>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

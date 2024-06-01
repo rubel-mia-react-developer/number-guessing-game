@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Podkova:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./a85d0485713744fd02df391a8e6053d1.jpg);
+}
+
+#welcome-screen, #input-screen, #game-screen {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
+/* Yoinked from CodePen, but improved the animation
+so that it is smooth among other more minor things */
+
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+}
+
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.codepen-button span {
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  background: #000;
+  border-radius: 3px;
+  height: 100%;
+}
+/* ================================number guessing game start================================== */
+
+.alomgir{
+   text-align: center;
+}
+ .main{
+    width: 500px;
+    height: 200px;
+    border: 2px solid rgb(236, 208, 208);
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+ }
+ .player_one_input{
+ width: 100%;
+ height: 50px;
+ outline: none;
+ border: 2px solid rgb(236, 208, 208);
+ background:rgb(236, 208, 208) ;
+ font-size: 30px;
+ flex-grow: 700;
+ color:black ;
+ text-align: center;
+ }
+ .player_one_button{
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    border: none;
+    background:#E9C874 ;
+    border: 2px solid black;
+    font-size: 23px;
+    font-weight: 600;
+ }
+ /* ==================== */span {
+   align-items: center;
+   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+   border: 0;
+   border-radius: 8px;
+   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   display: flex;
+   font-family: Phantomsans, sans-serif;
+   font-size: 18px;
+   justify-content: center;
+   line-height: 1em;
+   max-width: 100%;
+   min-width: 140px;
+   padding: 3px;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   white-space: nowrap;
+   cursor: pointer;
+   transition: all .3s;
+  }
+  
+  span:active,
+  span:hover {
+   outline: 0;
+  }
+  
+  span span {
+   background-color: rgb(5, 6, 45);
+   padding: 16px 24px;
+   border-radius: 6px;
+   width: 100%;
+   height: 100%;
+   transition: 300ms;
+  }
+  
+  span:hover span {
+   background: none;
+  }
+  
+  button:active {
+   transform: scale(0.9);
+  }
+/* =================== */
+ .error{
+    font-size: 20px;
+    font-weight: 600px;
+    color: red;
+ }
+ /* ===========payer two========== */
+ .player_tow_input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: 2px solid rgb(236, 208, 208);
+    background:rgb(236, 208, 208) ;
+    font-size: 30px;
+    flex-grow: 700;
+    color:black ;
+    text-align: center;
+    }
+    .player_tow_button{
+       width: 100%;
+       height: 40px;
+       margin-top: 40px;
+       border: none;
+       background:#E9C874 ;
+       border: 2px solid black;
+       font-size: 23px;
+       font-weight: 600;
+     }
+     .player_tow_button:active{
+     transform: scale(1.1);
+     }
+
+     .player_tow{
+     display: none;
+        
+     }
+
+
+
+/* ================================number guessing game end================================== */
